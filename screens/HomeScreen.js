@@ -1,10 +1,5 @@
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { ImageBackground, StyleSheet, View, Text } from 'react-native';
-import { login } from '../components/Login'
-import { register } from '../components/Register'
-import ProfileScreen from './ProfileScreen';
-
 
 function HomeScreen({ navigation }) {
 
@@ -18,7 +13,7 @@ function HomeScreen({ navigation }) {
                 <Text onPress={() => navigation.navigate("ProfileScreen")} style={styles.loginText}>Login</Text>
             </View>
             <View style={styles.registerButton}>
-                <Text onPress={register} style={styles.registerText}>Connect MetaMask</Text>
+                <Text onPress={() => navigation.navigate("ConnectMetamask")} style={styles.registerText}>Connect MetaMask</Text>
             </View>
         </ImageBackground>
     );
